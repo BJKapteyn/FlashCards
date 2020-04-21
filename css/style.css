@@ -17,10 +17,17 @@ body {
     justify-content: center;
 }
 
-#flashCard {
+#flashCardContainer {
     grid-area: flashCard;
     height: 400px;
     background-color: aqua;
+}
+
+#flashCard {
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: crimson;
 }
 
 #flashCardButtons {
