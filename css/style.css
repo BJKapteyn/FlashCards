@@ -9,12 +9,18 @@ body {
 
 #flashCardGrid {
     display: grid;
-    grid-template-columns: 500px;
+    grid-template-columns: auto 500px;
     grid-template-rows: auto auto;
-    grid-template-areas: "flashCard"
-                         "buttons";
+    grid-template-areas: "choose flashCard" 
+                         "choose buttons";
     margin: auto;
     justify-content: center;
+}
+
+#selectionButtons {
+    grid-area: choose;
+    width: 50px;
+    background-color: rgb(185, 155, 161);
 }
 
 #flashCardContainer {
