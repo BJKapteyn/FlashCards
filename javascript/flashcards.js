@@ -1,7 +1,11 @@
 let buttons = {
     nextButton: document.getElementById('nextCard'),
-    flipCardButton: document.getElementById('flipCard')
+    flipCardButton: document.getElementById('flipCard'),
+    htmlButton: document.getElementById('htmlButton'),
+    jsButton: document.getElementById('jsButton')
 }
+
+let ididitgit = "I DID IT GUUUUUUIIIIT";
 
 let cardDisplay = document.getElementById('flashCard');
 
