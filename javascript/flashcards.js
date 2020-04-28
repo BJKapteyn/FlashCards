@@ -20,6 +20,7 @@ function toggleButton(button, onOrOff) {
 }
 
 buttons.htmlButton.addEventListener('click', function() {
+    //check to see if the button is already active
     if(buttons.htmlButton.style.color != "black") {
         toggleButton(buttons.htmlButton, true);
         toggleButton(buttons.htmlButtonOff, false);
@@ -33,6 +34,33 @@ buttons.htmlButtonOff.addEventListener('click', function() {
     }
 })
 
+buttons.jsButton.addEventListener('click', function() {
+    if(buttons.jsButton.style.color != "black") {
+        toggleButton(buttons.jsButton, true);
+        toggleButton(buttons.jsButtonOff, false);
+    }
+});
+
+buttons.jsButtonOff.addEventListener('click', function() {
+    if(buttons.jsButtonOff.style.color != "black") {
+        toggleButton(buttons.jsButtonOff, true);
+        toggleButton(buttons.jsButton, false);
+    }
+})
+
+buttons.cssButton.addEventListener('click', function() {
+    if(buttons.cssButton.style.color != "black") {
+        toggleButton(buttons.cssButton, true);
+        toggleButton(buttons.cssButtonOff, false);
+    }
+});
+
+buttons.cssButtonOff.addEventListener('click', function() {
+    if(buttons.cssButtonOff.style.color != "black") {
+        toggleButton(buttons.cssButtonOff, true);
+        toggleButton(buttons.cssButton, false);
+    }
+})
 
 
 let cardDisplay = document.getElementById('flashCard');
