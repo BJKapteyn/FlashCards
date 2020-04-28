@@ -2,10 +2,38 @@ let buttons = {
     nextButton: document.getElementById('nextCard'),
     flipCardButton: document.getElementById('flipCard'),
     htmlButton: document.getElementById('htmlButton'),
-    jsButton: document.getElementById('jsButton')
+    htmlButtonOff: document.getElementById('htmlButtonOff'),
+    jsButton: document.getElementById('jsButton'),
+    jsButtonOff: document.getElementById('jsButtonOff'),
+    cssButton: document.getElementById('cssButton'),
+    cssButtonOff: document.getElementById('cssButtonOff')
 }
 
-let ididitgit = "I DID IT GUUUUUUIIIIT";
+function toggleButton(button, onOrOff) {
+    if(onOrOff) {
+        button.style.backgroundColor = "white";
+        button.style.color = "black";
+    } else {
+        button.style.backgroundColor = "black";
+        button.style.color = "white";
+    }
+}
+
+buttons.htmlButton.addEventListener('click', function() {
+    if(buttons.htmlButton.style.color != "black") {
+        toggleButton(buttons.htmlButton, true);
+        toggleButton(buttons.htmlButtonOff, false);
+    }
+});
+
+buttons.htmlButtonOff.addEventListener('click', function() {
+    if(buttons.htmlButtonOff.style.color != "black") {
+        toggleButton(buttons.htmlButtonOff, true);
+        toggleButton(buttons.htmlButton, false);
+    }
+})
+
+
 
 let cardDisplay = document.getElementById('flashCard');
 
@@ -32,6 +60,21 @@ let htmlCardPile = {
     pileArray: [
         new FlashCard("Attribute", "Aspect of an HTML element defined inside the element Ex. <button bgrcolor=\"\">"),
         new FlashCard("Element", "Each part that makes up an HTML document")
+    ],
+    nextCard: function() {
+        if(this.pileIndex >= this.pileArray.length - 1) {
+            this.pileIndex = 0;
+        } else {
+            this.pileIndex++;
+        }
+        cardDisplay.innerText = this.pileArray[this.pileIndex].frontOfCard;
+    }
+}
+
+let cssCardPile = {
+    pileIndex: -1,
+    pileArray: [
+        new FlashCard("What are effects like :hover called", "pseudo-classes")
     ],
     nextCard: function() {
         if(this.pileIndex >= this.pileArray.length - 1) {

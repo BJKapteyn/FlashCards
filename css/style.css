@@ -19,7 +19,7 @@ body {
 
 #selectionButtons {
     grid-area: choose;
-    width: 50px;
+    width: auto;
     background-color: rgb(185, 155, 161);
 }
 
@@ -44,11 +44,32 @@ body {
 
 .buttons {
     display: inline-block;
+
+}
+
+.buttons:active {
+    background-color: white;
+    color: black;
+}
+
+.buttons, .blockButtons {
     border: 1px solid white;
     background-color: rgb(34, 20, 20);
+    color: white;
+}
+
+.buttons, .blockButtons, .blockButtonActive {
     border-radius: 3px;
     min-width: 50px;
     min-height: 30px;
-    color: white;
     cursor: pointer;
+}
+
+.blockButtons {
+    display: block;
+}
+
+.blockButtonActive {
+    background-color: white;
+    color: black;
 }
